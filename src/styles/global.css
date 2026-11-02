@@ -352,6 +352,30 @@ figure figcaption {
   color: var(--ink); display: block; margin-bottom: 6px;
 }
 
+/* 文末行动按钮（联盟/外链） */
+.cta-button {
+  display: inline-block;
+  margin: 2.4em 0 0.4em;
+  padding: 15px 34px;
+  font-family: var(--sans);
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--paper);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.cta-button:hover {
+  background: transparent;
+  color: var(--accent);
+}
+.cta-note {
+  font-family: var(--sans);
+  font-size: 0.72rem; color: var(--muted);
+  margin-top: 0.9em;
+}
+
 /* 返回链接 */
 .back-link {
   font-family: var(--sans);

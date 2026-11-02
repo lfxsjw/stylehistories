@@ -53,3 +53,7 @@ Here is what I keep coming back to. The white T-shirt was designed to be invisib
 No one sat down and decided this. No fashion house claimed it, no designer stamped it with a name. It moved from underclothes to cultural shorthand through a war, two movie stars, and the stubborn refusal of a lot of teenagers to put a collar on.
 
 Put one on tomorrow morning and notice what you are actually doing. You are wearing something a sailor in 1913 would recognize. It is probably the oldest thing in your closet, and you never think about it at all. That is the whole achievement.
+
+<a class="cta-button" href="https://www.chinesean.com/affiliate/clickBanner.do?wId=70079&pId=27736&cId=45930" rel="noopener sponsored">Shop the Look</a>
+
+<p class="cta-note">A plain white tee, the way it was meant to be worn.</p>
