@@ -1,0 +1,115 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const allPosts = (await getCollection('blog'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const featured = allPosts[0];
+const restPosts = allPosts.slice(1);
+const categories = [...new Set(allPosts.map((p) => p.data.category))];
+
+const issueNo = allPosts.length;
+const today = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+function readingTime(body: string): number {
+  return Math.max(1, Math.ceil(body.split(/\s+/).length / 200));
+}
+---
+
+<Layout title="Fashion History Journal" description="The stories behind what we wear — a daily fashion history journal exploring how clothing shaped the world.">
+  <!-- 刊号行 -->
+  <div class="container">
+    <div class="issue-line">
+      <span>Issue No. {issueNo}</span>
+      <span>{today}</span>
+      <span>Est. 2026</span>
+    </div>
+  </div>
+
+  <!-- 大标题区 -->
+  <section class="hero">
+    <div class="container">
+      <p class="kicker">A Daily Fashion History Journal</p>
+      <h1>The stories behind<br /><em>what we wear</em></h1>
+      <p class="hero-sub">
+        A new story from the wardrobe of history, every day.
+      </p>
+      <div class="hero-rule"></div>
+    </div>
+  </section>
+
+  <!-- 分类导航 -->
+  <div class="container" id="categories">
+    <nav class="category-bar">
+      <a href="/" class="is-active">All Stories</a>
+      {categories.map((cat) => (
+        <a href={`/category/${cat.toLowerCase()}/`}>{cat}</a>
+      ))}
+    </nav>
+  </div>
+
+  <!-- 特稿 -->
+  {featured && (
+    <div class="container">
+      <article class="featured">
+        <div class="featured-text">
+          <p class="kicker">Featured Story</p>
+          <h2><a href={`/blog/${featured.slug}/`}>{featured.data.title}</a></h2>
+          <p class="featured-deck">{featured.data.description}</p>
+          <p class="meta">
+            {formatDate(featured.data.pubDate)} · {featured.data.category} · {readingTime(featured.body)} min read
+          </p>
+        </div>
+        <div class="featured-media">
+          <a href={`/blog/${featured.slug}/`} aria-label={featured.data.title}>
+            {featured.data.heroImage && (
+              <img src={featured.data.heroImage} alt={featured.data.title} />
+            )}
+          </a>
+        </div>
+      </article>
+    </div>
+  )}
+
+  <!-- 最新故事 -->
+  <div class="container">
+    <div class="section-head">
+      <h2>Latest Stories</h2>
+    </div>
+
+    <div class="post-grid">
+      {restPosts.map((post) => (
+        <article class="post-item">
+          <a href={`/blog/${post.slug}/`} class="post-link">
+            <div class="post-media">
+              {post.data.heroImage && (
+                <img src={post.data.heroImage} alt={post.data.title} />
+              )}
+            </div>
+            <p class="kicker">{post.data.category}</p>
+            <h2>{post.data.title}</h2>
+            <p class="excerpt">{post.data.description}</p>
+            <p class="meta">
+              {formatDate(post.data.pubDate)} · {readingTime(post.body)} min read
+            </p>
+          </a>
+        </article>
+      ))}
+    </div>
+  </div>
+
+  <!-- 编辑拉引语 -->
+  <section class="pullquote-band">
+    <div class="pq-mark">&ldquo;</div>
+    <blockquote>
+      Fashion fades, only style remains the same.
+    </blockquote>
+    <cite>— Coco Chanel</cite>
+  </section>
+</Layout>

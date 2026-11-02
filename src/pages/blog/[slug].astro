@@ -1,0 +1,83 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const minutes = Math.max(1, Math.ceil(post.body.split(/\s+/).length / 200));
+
+// 文章结构化数据（Google 富摘要：标题/日期/摘要/配图）
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.pubDate.toISOString(),
+  author: { '@type': 'Organization', name: 'Dressed in History' },
+  publisher: { '@type': 'Organization', name: 'Dressed in History' },
+  mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).toString(),
+};
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<Layout
+  title={post.data.title}
+  description={post.data.description}
+  image={post.data.heroImage}
+  type="article"
+  publishedTime={post.data.pubDate.toISOString()}
+>
+  <article class="article">
+    <div class="container article-inner">
+      <a href="/" class="back-link">All Stories</a>
+
+      <header class="article-header">
+        <p class="kicker">{post.data.category} · Fashion History</p>
+        <h1>{post.data.title}</h1>
+        <p class="deck">{post.data.description}</p>
+        <div class="meta">
+          <span>{formatDate(post.data.pubDate)}</span>
+          <span class="meta-dot">·</span>
+          <span>{minutes} min read</span>
+        </div>
+      </header>
+
+      {post.data.heroImage && (
+        <figure class="article-hero">
+          <img src={post.data.heroImage} alt={post.data.title} />
+        </figure>
+      )}
+      <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+
+      <div class="prose">
+        <Content />
+      </div>
+
+      {post.data.tags.length > 0 && (
+        <p style="margin-top: 40px; display: flex; gap: 18px; flex-wrap: wrap;">
+          {post.data.tags.map((t) => <span class="tag">{t}</span>)}
+        </p>
+      )}
+
+      <div class="disclosure">
+        <strong>Disclosure</strong>
+        This post may contain affiliate links. If you buy through them, we may earn a
+        commission at no extra cost to you.
+      </div>
+
+      <a href="/" class="back-link bottom">All Stories</a>
+    </div>
+  </article>
+</Layout>
