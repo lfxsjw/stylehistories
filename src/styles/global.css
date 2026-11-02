@@ -353,7 +353,7 @@ figure figcaption {
 }
 
 /* 文末行动按钮（联盟/外链） */
-.cta-button {
+.prose a.cta-button {
   display: inline-block;
   margin: 2.4em 0 0.4em;
   padding: 15px 34px;
@@ -363,10 +363,11 @@ figure figcaption {
   color: var(--paper);
   background: var(--accent);
   border: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
   text-decoration: none;
   transition: background 0.18s ease, color 0.18s ease;
 }
-.cta-button:hover {
+.prose a.cta-button:hover {
   background: transparent;
   color: var(--accent);
 }
