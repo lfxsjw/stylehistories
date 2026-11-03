@@ -4,6 +4,7 @@ description: "Named for a British earl whose career peaked in a catastrophic cav
 pubDate: 2026-11-03
 category: "Icons"
 tags: ["Knitwear", "Military History", "Chanel", "British Style"]
+heroImage: "/images/cardigan.jpg"
 ---
 
 The most expensive sweater ever sold at auction is a green cardigan with a cigarette burn in it and a button missing. Kurt Cobain wore it once, for Nirvana's MTV *Unplugged* set in November 1993, and never washed it again. In October 2019 it sold for $334,000. Nobody bid on it because of the wool. They bid on it because of who wore it, and because of the strange thing a cardigan can mean when it hangs off the right shoulders.

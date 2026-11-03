@@ -4,6 +4,7 @@ description: "Issued to French sailors in 1858 so a man overboard could be spott
 pubDate: 2026-11-03
 category: "Icons"
 tags: ["Stripes", "French Style", "Nautical", "Chanel"]
+heroImage: "/images/breton-striped-shirt.jpg"
 ---
 
 Count the stripes on a real Breton shirt and you will find twenty-one. That number is not a design choice. It is a safety measure, written into a regulation of the French Navy dated 27 March 1858, which set down exactly how the thing should be made: twenty or twenty-one indigo stripes on the body, each one half as wide as the white band beside it, fourteen on the sleeves. The point was not elegance. Sailors told each other the stripes made a man easier to see if he went overboard, a bright pattern breaking the flat grey of the sea.
