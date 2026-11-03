@@ -52,7 +52,3 @@ I have a marinière that I bought years ago, and I still reach for it more than 
 That is the trick of the whole story, and I keep circling back to it. The marinière was designed to keep a drowning man visible. Instead it became the most recognizable piece of "French style" in the world, a garment that generations of designers, painters, and actors kept picking up without anyone ever needing to explain why. Nothing about it was planned. It just survived, because it was good at its job, and it turned out the job could be anything.
 
 Next time you see a striped shirt, count the stripes. Twenty-one, if it is the real thing. A number from a drowning regulation, a century and a half ago, now worn to the supermarket without a second thought. That is the whole achievement, and nobody gets the credit.
-
-<a class="cta-button" href="https://www.chinesean.com/affiliate/clickBanner.do?wId=70079&pId=27736&cId=45930" rel="noopener sponsored">Shop the Look</a>
-
-<p class="cta-note">A classic Breton stripe, the way it has been worn since 1858.</p>
