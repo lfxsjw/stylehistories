@@ -81,3 +81,7 @@ BEAUTY & YOUTH belongs to UNITED ARROWS, one of the Tokyo select shops that, sin
 ## Before the 12th
 
 The sale closes on November 12, and the 26D11 code is quota-limited, first come first served, so the extra 5% is the part that can actually run out. One way to shop a sale like this: skip the pieces that only look good at a discount, and buy the discounted versions of things that were never going away anyway — a Samba, a striped tee, a plain black tote. Every piece above fits that description. The price is temporary; most of the designs are not.
+
+<a class="cta-button" href="https://www.chinesean.com/affiliate/clickBanner.do?wId=70079&pId=19044&cId=31425" rel="noopener sponsored">Shop the Look</a>
+
+<p class="cta-note">The FW26 sale picks, from tote to blazer.</p>
