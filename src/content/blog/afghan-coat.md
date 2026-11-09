@@ -32,3 +32,7 @@ What gets me is how little has changed. The coat is having another moment right 
 That's the strange ending to this story. The Afghan coat has been more popular outside Afghanistan than inside it for over half a century, and its current revival is no different. A garment made to keep mountain shepherds warm in a place most of its current owners will never visit is now a fashion statement whose name belongs to a movie. The embroidery is still the point — the flowers, the color, the handmade unevenness — but almost nobody wearing it now knows that those stitches were once a woman's signature, made in a yellow hide tanned with pomegranate rind, in a province most of us couldn't find on a map.
 
 So here's the small thing I'd suggest. Next time you see one of these coats — on a stranger, on Instagram, on a rack — call it by its first name. Not because the name matters more than the coat, but because it's the least the women who made the originals are owed. You can't put their names on the tag anymore. But you don't have to keep erasing them either.
+
+<a class="cta-button" href="https://www.chinesean.com/affiliate/clickBanner.do?wId=70079&pId=21590&cId=36050" rel="noopener sponsored">Shop the Look</a>
+
+<p class="cta-note">The Afghan coat look — shearling, embroidery, and all.</p>
