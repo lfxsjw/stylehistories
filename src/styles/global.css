@@ -469,7 +469,8 @@ figure figcaption {
 }
 
 /* ============ 联盟 CTA 按钮（Shop the Look）============ */
-.cta-button {
+/* 注意：写在 .prose 内会被 .prose a 链接样式覆盖，故用 .prose .cta-button 提权 */
+.prose .cta-button {
   display: table;
   margin: 2.6rem auto 0.9rem;
   padding: 0.95rem 2.6rem;
@@ -481,14 +482,15 @@ figure figcaption {
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--ink);
-  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  border-bottom: 1px solid var(--ink);
+  transition: background 0.18s ease, color 0.18s ease;
 }
-.cta-button:hover {
+.prose .cta-button:hover {
   background: var(--ink);
   color: var(--paper);
   border-color: var(--ink);
 }
-.cta-note {
+.prose .cta-note {
   text-align: center;
   font-family: var(--serif);
   font-style: italic;
